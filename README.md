@@ -1,3 +1,5 @@
+![Banner Asistente de Empleabilidad](banner.svg)
+
 # 🎯 Asistente de Empleabilidad con IA
 
 > Sistema profesional de búsqueda laboral impulsado por Inteligencia Artificial
