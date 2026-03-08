@@ -3,109 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente de Empleabilidad IA</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Asistente de Empleabilidad con IA | Gratis | Bitsolution</title>
+    <meta name="description" content="Tu mentor personal de RRHH impulsado por IA. Crea CVs profesionales, prepárate para entrevistas y mejora tu búsqueda laboral. 100% gratuito.">
+    <meta name="keywords" content="CV, currículum, empleo, trabajo, IA, inteligencia artificial, RRHH, recursos humanos, entrevista laboral, búsqueda de empleo, Argentina">
+    <meta name="author" content="Bitsolution & CyberLabs R4">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bitsolution-ar.github.io/asistente-empleabilidad/">
+    <meta property="og:title" content="Asistente de Empleabilidad con IA - Gratis">
+    <meta property="og:description" content="Tu mentor personal de RRHH impulsado por IA. Crea CVs profesionales, prepárate para entrevistas y mejora tu búsqueda laboral. 100% gratuito.">
+    <meta property="og:image" content="https://bitsolution-ar.github.io/asistente-empleabilidad/banner.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Asistente de Empleabilidad IA">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bitsolution-ar.github.io/asistente-empleabilidad/">
+    <meta name="twitter:title" content="Asistente de Empleabilidad con IA - Gratis">
+    <meta name="twitter:description" content="Tu mentor personal de RRHH impulsado por IA. Crea CVs profesionales, prepárate para entrevistas y mejora tu búsqueda laboral.">
+    <meta name="twitter:image" content="https://bitsolution-ar.github.io/asistente-empleabilidad/banner.svg">
+    
+    <!-- WhatsApp specific -->
+    <meta property="og:image:alt" content="Asistente de Empleabilidad con IA - Bitsolution">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bitsolution-ar.github.io/asistente-empleabilidad/">
+    
     <style>
-        /* Estilos generales (CSS) */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+        /* Reset y variables */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --azul-principal: #1a73e8;
+            --verde-acento: #34a853;
+            --naranja-acento: #d97757;
+            --gris-texto: #5f6368;
+            --gradiente-fondo: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gradiente-fondo);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
         }
+        
         .container {
             background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 100%;
             text-align: center;
-            margin: 20px;
+            animation: fadeIn 0.5s ease-in;
         }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+            color: var(--azul-principal);
+            margin-bottom: 8px;
+            font-size: 1.8em;
+            line-height: 1.2;
         }
+        
+        .emoji {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
         p.subtitle {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            margin-bottom: 30px;
+            font-size: 1em;
+            color: var(--gris-texto);
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
+        
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #e8f0fe;
+            color: var(--azul-principal);
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 5px;
+        }
+        
         .instructions {
-            background-color: #e8f4f8;
-            border-left: 4px solid #3498db;
+            background-color: #e8f0fe;
+            border-left: 4px solid var(--azul-principal);
             padding: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-align: left;
-            font-size: 0.95em;
+            font-size: 0.9em;
+            border-radius: 5px;
         }
-        /* Estilos de los botones */
+        
+        .instructions strong {
+            color: var(--azul-principal);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
         .btn-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
+            margin-bottom: 20px;
         }
+        
         .btn {
-            padding: 15px 20px;
+            padding: 16px 20px;
             font-size: 1em;
-            font-weight: bold;
+            font-weight: 600;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
-        .btn-gemini { background-color: #1a73e8; }
-        .btn-gemini:hover { background-color: #1557b0; }
         
-        .btn-chatgpt { background-color: #10a37f; }
-        .btn-chatgpt:hover { background-color: #0d8466; }
-
-        .btn-claude { background-color: #d97757; }
-        .btn-claude:hover { background-color: #b86448; }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 0.85em;
-            color: #95a5a6;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-gemini { 
+            background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+        }
+        
+        .btn-chatgpt { 
+            background: linear-gradient(135deg, #10a37f 0%, #0d8466 100%);
+        }
+
+        .btn-claude { 
+            background: linear-gradient(135deg, #d97757 0%, #b86448 100%);
+        }
+        
+        .footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.85em;
+            color: var(--gris-texto);
+        }
+        
         .footer span {
             font-weight: bold;
-            color: #2c3e50;
+            color: var(--azul-principal);
+        }
+        
+        .loading {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #e6f4ea;
+            border-radius: 8px;
+            color: var(--verde-acento);
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--azul-principal);
+        }
+        
+        .stat-label {
+            font-size: 0.75em;
+            color: var(--gris-texto);
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .btn {
+                padding: 14px 18px;
+                font-size: 0.95em;
+            }
+            
+            .emoji {
+                font-size: 2em;
+            }
+        }
+        
+        /* Accesibilidad */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <span class="emoji">🎯</span>
         <h1>Asistente de Empleabilidad</h1>
-        <p class="subtitle">Tu mentor personal de Recursos Humanos impulsado por Inteligencia Artificial.</p>
+        <p class="subtitle">Tu mentor personal de RRHH impulsado por Inteligencia Artificial.</p>
+        
+        <div style="margin-bottom: 20px;">
+            <span class="badge">✅ 100% Gratis</span>
+            <span class="badge">🚀 Sin Registro</span>
+            <span class="badge">🇦🇷 Argentina</span>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Años expertise</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Sectores</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">IAs disponibles</div>
+            </div>
+        </div>
         
         <div class="instructions">
-            <strong>¿Cómo funciona?</strong><br>
-            1. Haz clic en la herramienta que prefieras.<br>
-            2. Se copiará automáticamente el "cerebro" del asistente a tu portapapeles.<br>
-            3. En la nueva pestaña que se abrirá, simplemente presiona <strong>Pegar (Ctrl+V)</strong> en el chat y envía el mensaje para empezar.
+            <strong>📋 Cómo funciona:</strong>
+            <ol>
+                <li>Hacé clic en la IA que prefieras</li>
+                <li>El sistema se copia automáticamente</li>
+                <li>En la nueva pestaña, pegá y enviá</li>
+                <li>¡Listo! Ya podés conversar</li>
+            </ol>
         </div>
 
         <div class="btn-container">
-            <button class="btn btn-gemini" onclick="abrirIA('https://gemini.google.com')">Abrir en Google Gemini</button>
-            <button class="btn btn-chatgpt" onclick="abrirIA('https://chatgpt.com')">Abrir en ChatGPT</button>
-            <button class="btn btn-claude" onclick="abrirIA('https://claude.ai')">Abrir en Claude</button>
+            <button class="btn btn-gemini" onclick="abrirIA('gemini')" aria-label="Abrir en Google Gemini">
+                🔵 Abrir en Google Gemini
+            </button>
+            <button class="btn btn-chatgpt" onclick="abrirIA('chatgpt')" aria-label="Abrir en ChatGPT">
+                🟢 Abrir en ChatGPT
+            </button>
+            <button class="btn btn-claude" onclick="abrirIA('claude')" aria-label="Abrir en Claude">
+                🟠 Abrir en Claude
+            </button>
         </div>
+        
+        <p class="loading" id="loading" role="status" aria-live="polite">✅ ¡Copiado! Abriendo IA...</p>
 
         <div class="footer">
-            Una iniciativa gratuita de <span>Bitsolution</span> y <span>CyberLabs R4</span>.
+            Una iniciativa gratuita de<br>
+            <span>Bitsolution</span> y <span>CyberLabs R4</span>
         </div>
     </div>
 
     <script>
-        // Aquí guardamos el Megaprompt
         const promptMaestro = `Eres un Experto en Recursos Humanos con 20+ años de experiencia, especializado en democratizar oportunidades laborales con IA.
 
 EXPERTISE: 12 sectores (IT, retail, manufactura, salud, educación, hostelería, construcción, administración, agroindustria, logística, servicios, público) • 8 niveles (entry-level a C-suite) • ATS y plataformas argentinas (LinkedIn, Bumeran, Computrabajo, ZonaJobs, Indeed) • Mercado argentino (salarios, legislación, tendencias, regional).
@@ -129,17 +352,39 @@ INTERACCIÓN: Bienvenida cálida→Preguntar "¿tenés CV?" y "¿tenés postulac
 
 AHORA: Preséntate como asistente de empleabilidad, explica cómo trabajarán juntos, haz primera pregunta (¿CV? ¿postulación?). Tono empático, profesional, argentino. ¡Ayúdalo a conseguir el trabajo que merece!`;
 
-        function abrirIA(url) {
-            // Intenta copiar el texto al portapapeles del usuario
+        const urls = {
+            'gemini': 'https://gemini.google.com',
+            'chatgpt': 'https://chatgpt.com',
+            'claude': 'https://claude.ai'
+        };
+
+        function abrirIA(tipo) {
+            const loading = document.getElementById('loading');
+            
+            // Copiar al portapapeles
             navigator.clipboard.writeText(promptMaestro).then(() => {
-                alert("¡Instrucciones copiadas al portapapeles!\n\nSe abrirá la IA. Solo tienes que hacer clic derecho en el chat, elegir 'Pegar' y presionar Enviar.");
-                // Abre la web de la IA en una pestaña nueva
-                window.open(url, '_blank');
+                // Mostrar feedback
+                loading.style.display = 'block';
+                
+                // Abrir IA después de un pequeño delay
+                setTimeout(() => {
+                    window.open(urls[tipo], '_blank');
+                    
+                    // Ocultar loading después de 2 segundos
+                    setTimeout(() => {
+                        loading.style.display = 'none';
+                    }, 2000);
+                }, 500);
+                
             }).catch(err => {
-                alert("Hubo un error al copiar el texto. Tu navegador podría requerir permisos especiales.");
-                console.error('Error al copiar: ', err);
+                // Fallback para navegadores que no soportan clipboard API
+                alert("⚠️ No se pudo copiar automáticamente.\n\nPor favor:\n1. Mantén presionado el botón\n2. Selecciona 'Copiar'\n3. Luego abrí la IA manualmente");
+                console.error('Error al copiar:', err);
             });
         }
+        
+        // Analytics simple (opcional - puedes remover si no quieres)
+        // Google Analytics o similar iría aquí
     </script>
 
 </body>
