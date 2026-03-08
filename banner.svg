@@ -1,0 +1,66 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo principal -->
+  <rect width="1200" height="630" fill="url(#gradient1)"/>
+  
+  <!-- Patrones decorativos -->
+  <circle cx="100" cy="100" r="150" fill="#ffffff" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="180" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Contenedor principal -->
+  <rect x="80" y="120" width="1040" height="390" rx="20" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Título principal -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#1a73e8" text-anchor="middle">
+    Asistente de Empleabilidad
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="42" fill="#5f6368" text-anchor="middle">
+    Tu mentor de RRHH impulsado por IA
+  </text>
+  
+  <!-- Características -->
+  <g>
+    <!-- Feature 1 -->
+    <rect x="150" y="340" width="30" height="30" rx="5" fill="#34a853"/>
+    <text x="195" y="365" font-family="Arial, sans-serif" font-size="24" fill="#333">
+      CVs profesionales
+    </text>
+    
+    <!-- Feature 2 -->
+    <rect x="450" y="340" width="30" height="30" rx="5" fill="#1a73e8"/>
+    <text x="495" y="365" font-family="Arial, sans-serif" font-size="24" fill="#333">
+      Preparación entrevistas
+    </text>
+    
+    <!-- Feature 3 -->
+    <rect x="850" y="340" width="30" height="30" rx="5" fill="#d97757"/>
+    <text x="895" y="365" font-family="Arial, sans-serif" font-size="24" fill="#333">
+      100% Gratuito
+    </text>
+  </g>
+  
+  <!-- URL - Rectángulo más ancho y fuente ajustada -->
+  <rect x="180" y="420" width="840" height="60" rx="30" fill="url(#gradient2)"/>
+  <text x="600" y="460" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    bitsolution-ar.github.io/asistente-empleabilidad
+  </text>
+  
+  <!-- Footer -->
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" opacity="0.9">
+    Bitsolution &amp; CyberLabs R4 | Río Cuarto, Argentina
+  </text>
+</svg>
