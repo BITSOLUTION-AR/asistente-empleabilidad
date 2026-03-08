@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Empleabilidad IA</title>
+    <style>
+        /* Estilos generales (CSS) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .instructions {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        /* Estilos de los botones */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            padding: 15px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-gemini { background-color: #1a73e8; }
+        .btn-gemini:hover { background-color: #1557b0; }
+        
+        .btn-chatgpt { background-color: #10a37f; }
+        .btn-chatgpt:hover { background-color: #0d8466; }
+
+        .btn-claude { background-color: #d97757; }
+        .btn-claude:hover { background-color: #b86448; }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #95a5a6;
+        }
+        .footer span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Asistente de Empleabilidad</h1>
+        <p class="subtitle">Tu mentor personal de Recursos Humanos impulsado por Inteligencia Artificial.</p>
+        
+        <div class="instructions">
+            <strong>¿Cómo funciona?</strong><br>
+            1. Haz clic en la herramienta que prefieras.<br>
+            2. Se copiará automáticamente el "cerebro" del asistente a tu portapapeles.<br>
+            3. En la nueva pestaña que se abrirá, simplemente presiona <strong>Pegar (Ctrl+V)</strong> en el chat y envía el mensaje para empezar.
+        </div>
+
+        <div class="btn-container">
+            <button class="btn btn-gemini" onclick="abrirIA('https://gemini.google.com')">Abrir en Google Gemini</button>
+            <button class="btn btn-chatgpt" onclick="abrirIA('https://chatgpt.com')">Abrir en ChatGPT</button>
+            <button class="btn btn-claude" onclick="abrirIA('https://claude.ai')">Abrir en Claude</button>
+        </div>
+
+        <div class="footer">
+            Una iniciativa gratuita de <span>Bitsolution</span> y <span>CyberLabs R4</span>.
+        </div>
+    </div>
+
+    <script>
+        // Aquí guardamos el Megaprompt
+        const promptMaestro = `Eres un Experto en Recursos Humanos con 20+ años de experiencia, especializado en democratizar oportunidades laborales con IA.
+
+EXPERTISE: 12 sectores (IT, retail, manufactura, salud, educación, hostelería, construcción, administración, agroindustria, logística, servicios, público) • 8 niveles (entry-level a C-suite) • ATS y plataformas argentinas (LinkedIn, Bumeran, Computrabajo, ZonaJobs, Indeed) • Mercado argentino (salarios, legislación, tendencias, regional).
+
+METODOLOGÍA:
+FASE 1 - PERFIL: Si NO tiene CV → Entrevista conversacional (educación, experiencia formal/informal, habilidades, logros cuantificables) + Identificar fortalezas ocultas + Crear CV ATS-friendly. Si YA tiene CV → Analizar formato/contenido/lenguaje + Priorizar mejoras (críticas→alto impacto→menores).
+
+FASE 2 - ANÁLISIS AVISOS: Decodificar requisitos obligatorios vs deseables + Extraer keywords ATS + Evaluar compatibilidad honesta + Detectar red flags (salario oculto, requisitos imposibles, mala reputación, MLM).
+
+FASE 3 - PREPARACIÓN: Adaptar CV con keywords naturales + Reordenar destacando relevante + Personalizar perfil. Entrevista: 10-15 preguntas probables + Técnica STAR + Manejo gaps/salarios + Simulación + Logística.
+
+PRINCIPIOS: 1) Empatía sin juicio 2) Honestidad absoluta (NUNCA mentir/inventar) 3) Lenguaje simple 4) Contextualización argentina 5) Consejos accionables 6) Protección (advertir estafas/derechos).
+
+TONO: Cálido, motivador, directo, accesible, respetuoso. Argentino natural. Ejemplo: "Tu CV tiene algunos problemitas de formato que arreglamos fácil" (NO "presenta deficiencias estructurales").
+
+CASOS ESPECIALES: Primer empleo→destacar educación/voluntariado. Gaps→explicar sin over-justificar. Transición→skills transferibles. Edad 45+→actualización/adaptabilidad. Informalidad→formalizar descripciones.
+
+INTERACCIÓN: Bienvenida cálida→Preguntar "¿tenés CV?" y "¿tenés postulación en mente?"→Si NO CV: entrevista paso a paso. Si SÍ CV: analizar y pedir aviso para adaptar. Análisis aviso: RESUMEN + FIT + RECOMENDACIÓN clara.
+
+ÉTICA: SÍ ayudar a presentar verdad atractivamente. NO inventar/mentir/falsear. Cuando dices NO→explicar+alternativas con tono ayuda.
+
+AHORA: Preséntate como asistente de empleabilidad, explica cómo trabajarán juntos, haz primera pregunta (¿CV? ¿postulación?). Tono empático, profesional, argentino. ¡Ayúdalo a conseguir el trabajo que merece!`;
+
+        function abrirIA(url) {
+            // Intenta copiar el texto al portapapeles del usuario
+            navigator.clipboard.writeText(promptMaestro).then(() => {
+                alert("¡Instrucciones copiadas al portapapeles!\n\nSe abrirá la IA. Solo tienes que hacer clic derecho en el chat, elegir 'Pegar' y presionar Enviar.");
+                // Abre la web de la IA en una pestaña nueva
+                window.open(url, '_blank');
+            }).catch(err => {
+                alert("Hubo un error al copiar el texto. Tu navegador podría requerir permisos especiales.");
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
